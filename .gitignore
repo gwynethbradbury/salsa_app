@@ -1,0 +1,5 @@
+dbconfig.py
+*.pyc
+*.swp
+*.DS_Store
+.idea*

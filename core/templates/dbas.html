@@ -1,0 +1,36 @@
+{% extends "console.html" %}
+
+
+{% block servicename %}
+Database Services
+{% endblock %}
+
+	
+{% block consolecontent %}
+    {% if instances|length>0 %}
+
+        My database services:
+
+        <ul>
+                {% for instance in instances %}
+                        <li><a href="{{instance[0]}}">{{instance[1]}}</a></li>
+                {% endfor %}
+        </ul>
+
+
+    {% else %}
+
+    If you have any existing Nextcloud services, they should be displayed here.
+
+    {% endif %}
+        <hr>
+{% endblock %}
+
+
+{% block serviceinfo %}
+<h3>Information</h3>
+<p>We offer a database management service where users can access their databases from any device.
+Data can be added, viewed, and extracted using the web interface.
+Get in touch if you have questions or are interested in access for your project.</p>
+<p>If you have access as to any project databases, they will appear above.</p>
+{% endblock %}
